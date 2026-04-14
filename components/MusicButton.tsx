@@ -12,8 +12,7 @@ export default function MusicButton() {
   useEffect(() => {
     setMounted(true);
     // Create audio element with a royalty-free music URL (replace with your own)
-    audioRef.current = new Audio(
-      "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    audioRef.current = new Audio("/gamelan.mp3"
     );
     audioRef.current.loop = true;
     audioRef.current.volume = 0.4;
