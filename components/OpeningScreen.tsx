@@ -23,15 +23,17 @@ export default function OpeningScreen({ onOpen }: OpeningScreenProps) {
       transition={{ duration: 1.2, ease: "easeInOut" }}
     >
       {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80')",
-          filter: "blur(2px) brightness(0.35)",
-          transform: "scale(1.05)",
-        }}
-      />
+      <motion.div
+  className="absolute inset-0 bg-cover bg-center"
+  initial={{ scale: 1.1 }}
+  animate={{ scale: 1 }}
+  transition={{ duration: 8, ease: "easeOut" }}
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80')",
+    filter: "blur(2px) brightness(0.3)",
+  }}
+/>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-soft-black/60 via-dark-brown/40 to-soft-black/80" />
